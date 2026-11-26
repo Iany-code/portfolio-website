@@ -62,10 +62,14 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 76px; gap: 24px; }
 .logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; }
 .logo-mark {
-  display: grid; place-items: center; width: 38px; height: 38px; border-radius: 11px;
-  background: var(--accent); color: var(--ink);
-  font-family: var(--display); font-weight: 900; font-size: 1.15rem; letter-spacing: .02em;
+  display: grid; grid-template-columns: 1fr 1fr; width: 38px; height: 38px; border-radius: 11px; overflow: hidden;
+  background: linear-gradient(90deg, var(--ink) 50%, var(--accent) 50%);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.14);
+  font-family: var(--display); font-weight: 900; font-size: 1.3rem; line-height: 1;
 }
+.logo-mark span { display: grid; place-items: center; }
+.logo-mark span:first-child { color: #fff; }
+.logo-mark span:last-child { color: var(--ink); }
 .logo-text { font-family: var(--display); font-weight: 800; font-size: 1.45rem; letter-spacing: .02em; text-transform: uppercase; }
 .nav-links { display: flex; gap: 32px; }
 .nav-links a { color: rgba(255,255,255,.78); text-decoration: none; font-weight: 500; font-size: .95rem; transition: color .2s; }
